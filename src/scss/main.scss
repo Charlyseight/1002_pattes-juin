@@ -1,0 +1,717 @@
+@import "variables";
+@import "mixins";
+body{
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+    max-width: 100%;
+}
+.hidden{
+    font-size: 0;
+    overflow: hidden;
+    position: absolute;
+}
+
+.blocheader__nav .active{
+    color: $pink;
+    border-bottom: 2px solid $pink;
+
+}
+///////////////////////////////////////////////////////Accueil
+///////////////////////////////////////////////////////Accueil_header
+
+.blocheader__flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.blocheader__desc__img{
+    background: url("../images/child.jpeg") center no-repeat;
+    background-size:cover;
+    margin-top: 3em;
+    padding-bottom: 40%;
+}
+
+.croop{
+    //background: url("../images/child.jpeg") top no-repeat;
+    padding-bottom: 10%;
+    background-position: top;
+}
+
+.blocheader__desc{
+    text-align: center;
+}
+
+.blocheader__desc__text{
+    font-size: 2.8vw;
+    width: 80%;
+    font-weight: 100;
+    color: rgb(47,47,47);
+    line-height: 2;
+    display: block;
+    margin: 0em auto;
+    padding-top: 1.5em;
+    font-family: $font;
+}
+
+.logo__link{
+    display: block;
+    width: 80%;
+    margin: 3em 0 0 3em;
+}
+
+.logo__img{
+    width: 100%;
+    height: auto;
+}
+
+.blocheader__nav__list{
+    display: flex;
+    margin-right: 2em;
+}
+
+.list__item{
+    border-right: 1px solid lightgray;
+}
+
+.list__item:last-child{
+    border-right: none;
+    padding-right: initial;
+    margin-right: initial;
+}
+
+.list__item__link{
+    text-decoration: none;
+    color: dimgrey;
+    font-size: 1.3vw;
+    margin: 0 .8em;
+    padding: .8em;
+    font-weight: 400;
+}
+.link--noborder{
+    border-right: none;
+}
+
+///////////////////////////////////////////////////////END_Accueil_header
+///////////////////////////////////////////////////////Accueil_qui sommes nous
+
+.blocabout__title1{
+    @include title;
+}
+
+.blocabout__text{
+    @include text;
+}
+.blocabout__link{
+    @include button;
+    background-color: $blue;
+    display: inline-block;
+    margin: 4em $margin 13em;
+    text-align: center;
+}
+
+.blocabout__link:hover{
+    background-color: $blue_dark;
+}
+
+///////////////////////////////////////////////////////END_Accueil_qui sommes nous
+///////////////////////////////////////////////////////Accueil_Equipe_encart
+
+.blocteamI-space__divimg{
+    background: url("../images/equipe.jpg") no-repeat;
+    background-size: contain;
+    padding: 20%;
+    margin-bottom: 4em;
+}
+
+.blocteamI-space{
+    text-align: center;
+}
+
+.blocteamI-space__link{
+    @include button;
+    background-color: $pink;
+    display: inline-block;
+    margin: 8em 0 13em;
+    text-align: center;
+}
+
+.blocteamI-space__link:hover{
+    background-color: $pink_dark;
+}
+
+/////// animation css
+
+.blocteamI-space__animation{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow:hidden;
+}
+
+.blocteamI-space__animation__content{
+    height: 40px;
+    overflow: hidden;
+}
+
+.blocteamI-space__text{
+    display: inline;
+    float: left;
+    font-size: 2.8vw;
+    font-weight: 100;
+    margin-left: 15%;
+    color: dimgrey;
+
+}
+
+.blocteamI-space__list{
+    padding-left: 380px;
+    text-align: left;
+    list-style: none;
+    animation-name: change;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    position: relative;
+    top: 4px;
+}
+
+.blocteamI-space__text--word{
+    line-height:40px;
+    margin:0;
+    font-size: 2.1vw;
+    color: $pink;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@keyframes change {
+    0%, 8.50%, 100% {transform:translate3d(0,0,0);}
+    12.50%, 21% {transform:translate3d(0,-20%,0);}
+    25%, 33.5% {transform:translate3d(0,-40%,0);}
+    37.5%,46% {transform:translate3d(0,-60%,0);}
+    50%,58.5% {transform:translate3d(0,-80%,0);}
+    62.5%,71% {transform:translate3d(0,-60%,0);}
+    75%,83.5% {transform:translate3d(0,-40%,0);}
+    87.5%, 96% {transform:translate3d(0,-20%,0);}
+}
+
+
+
+///////////////////////////////////////////////////////END_Accueil_Equipe_encart
+///////////////////////////////////////////////////////Accueil_Equipe_activite
+
+.blocactiv{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 $margin 8em;
+}
+.blocactiv__content__title1{
+    font-size: 4vw;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-left: 0;
+    color: dimgrey;
+    font-weight: 100;
+    margin-bottom: .5em;
+}
+
+.blocactiv__img{
+    width: 150%;
+    height: auto;
+}
+
+.blocactiv__info{
+    margin: 3em 0 0 20em;
+    width: 90%;
+    border-left: 1px solid lightgrey;
+    padding-left: 8em;
+}
+
+.blocactiv__info__title2{
+    color: dimgrey;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 2vw;
+    margin-bottom: 1.3em;
+    font-family: $font;
+}
+
+.blocactiv__info__text{
+    @include text;
+    margin: 0 auto;
+}
+
+///////////////////////////////////////////////////////Accueil_Equipe_help
+
+.blocsponsor{
+    margin: 8em $margin 25em;
+    text-align: center;
+}
+
+.blocsponsor__title1{
+    @include title;
+    border: none;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+.blocsponsor__list{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sitem__img{
+    width: 150px;
+    height: 150px;
+}
+
+////// HELP
+
+.blochelp-space{
+    margin-bottom: 15em;
+}
+
+.blochelp-space__divimg{
+    background: url("../images/arms.png") center no-repeat;
+    background-size: cover;
+    padding: 15% 0;
+}
+
+.blochelp-space__title1{
+    @include title;
+}
+
+.blochelp-space__text{
+    @include text;
+    margin-bottom: 5em;
+}
+
+.blochelp-space__link{
+    @include button;
+    background-color: $blue;
+    margin: 0 $margin;
+}
+
+.blochelp-space__link:hover{
+    background-color: $blue_dark;
+}
+
+.blochelp__ills{
+    //margin-bottom: 10em;
+}
+
+///////////////////////////////////////////////////////END_Accueil_Equipe_help
+///////////////////////////////////////////////////////Accueil_footer
+
+.blocfooter{
+    border-top: 1px solid lightgray;
+    text-align: center;
+
+}
+
+.blocfooter__text{
+    @include title;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    border: none;
+}
+
+.blocfooter__img{
+    width: 7%;
+    height: auto;
+    display: block;
+    margin: 0em auto 8em;
+}
+
+.blocfooter__flex{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5em;
+}
+
+.fitem{
+    font-size: 1.3em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+///////////////////////////////////////////////////////END_Accueil_footer
+///////////////////////////////////////////////////////AIDE_HOW
+
+
+.blochelp__title1, .blochelp-nojs__title1{
+    @include title;
+
+}
+
+.blochelp__text, .blochelp-nojs__text{
+    @include text;
+    margin-bottom: 2em;
+}
+
+.blochelp__title2{
+    text-transform: uppercase;
+    font-size: 2.5vw;
+    letter-spacing: 1px;
+    color: dimgrey;
+    text-align: center;
+    margin-top: 4em;
+    font-family: $font;
+}
+
+.blochelp-nojs__text2{
+    margin: 0 $margin 2em;
+    font-size: 1.8vw;
+    letter-spacing: 1px;
+    color: dimgrey;
+    margin-top: 4em;
+    font-weight: 100;
+    line-height: 1.5;
+    border: 1px dashed $pink;
+    padding: 2%;
+}
+
+.blochelp-nojs__div{
+    margin: 0 $margin;
+}
+
+.blochelp-nojs__title3{
+    @include title;
+    margin-left: 0;
+    margin-top: 3em;
+}
+
+.hnjitem__text{
+    @include text;
+    margin-left: 0;
+}
+
+.hnjitem__span{
+    display: block;
+    text-transform: uppercase;
+    margin: 3em 0;
+    font-weight: 700;
+    color: $blue;
+}
+
+.hnjitem__button{
+    @include button;
+    background-color: $blue;
+    display: inline-block;
+    margin-bottom: 5em;
+}
+
+.hnjitem{
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 2em;
+}
+
+.hnjitem__button:hover{
+    background-color: $blue_dark;
+}
+
+
+.ill:not(.active) .ill__description{
+    max-height:0;
+    overflow:hidden;
+}
+.ill.active .ill__description{
+    max-height: auto;
+}
+
+////DONS
+
+.blocdons-space__divimg{
+    background: url("../images/help.jpeg") bottom no-repeat;
+    background-size:cover;
+    height: 500px;
+}
+
+.blocdons-space{
+    text-align: center;
+}
+
+.blocdons-space__text{
+    font-family: $font;
+    font-size: 2.5vw;
+    color: dimgrey;
+    margin: 3em 0 2em;
+}
+
+.blocdons-space__link{
+    @include button;
+    background-color: $blue_dark;
+    margin-bottom: 15em;
+    display: inline-block;
+
+
+}
+
+
+
+///////////////////////////////////////////////////////END_AIDE_HOW
+///////////////////////////////////////////////////////PROPOS
+
+.blocpropos__title1{
+    @include title;
+    margin: 5em $margin 2em;
+}
+
+.blocpropos__text{
+    @include text;
+
+}
+
+.blocpropos__img{
+    width: 100%;
+    height: auto;
+    margin: 8em 0%;
+}
+
+.blocteamII-space{
+    //background-color: rgba(140, 130, 130, 0.4);
+    border-top: 1px solid lightgrey;
+    padding-top: 10em;
+    margin: 10em 0;
+}
+
+.blocteamII-space__divborder{
+    text-align: center;
+    margin: 0 $margin;
+}
+
+.blocteamII-space__icons{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.blocteamII-space__icons i{
+    font-size: 5vw;
+    color: black;
+    margin: 0em 1.8em 1.3em 1.8em;
+    position: relative;
+}
+
+.blocteamII-space__icons i:not(:last-of-type):after{
+    position: absolute;
+    content: "";
+    height: 1px;
+    background-color: black;
+    width: 100%;
+    margin-left: 70px;
+    top: 50%;
+}
+
+.blocteamII-space__text{
+    font-family: $font;
+    font-size: 2vw;
+    padding: 0 $margin;
+    line-height: $lineheight;
+    margin-bottom: 3em;
+}
+
+.blocteamII-space__link{
+    @include button;
+    background-color: $pink;
+    display: inline-block;
+}
+
+.blocteamII-space__link:hover{
+    background-color: $pink_dark;
+}
+
+//////////Equipe
+
+.blocteam__title1{
+    @include title;
+}
+
+.blocteam__text{
+    @include text;
+    margin-bottom: 5em;
+}
+
+.blocteam__spe__title1{
+    text-transform: uppercase;
+    font-size: 1.8vw;
+    color: $pink;
+    margin: 2em $margin;
+    position: relative;
+}
+
+.blocteam__spe__title1:after{
+    position: absolute;
+    content: "";
+    height: 1px;
+    background-color: lightgrey;
+    width: 10%;
+    margin-left: 20px;
+    top: 50%;
+}
+
+.blocteam__spe__text{
+    @include text;
+
+}
+
+.spe-item__img{
+    border-radius: 50%;
+    max-width: 100%;
+    width: 120px;
+    height: 120px;
+    margin-right: 2em;
+}
+
+.spe-list{
+    display: flex;
+    margin: 0 $margin 15em;
+}
+
+.spe-item__link {
+    display: block;
+    width: 100%;
+    height: 25px;
+    text-decoration: none;
+    margin-top: 4em;
+    color: $pink;
+    margin-right: 5em;
+
+}
+
+.spe-item__text{
+    font-size: 1.3vw;
+    //width: 100%;
+    border-bottom: 1px solid $pink;
+    padding: .3em 0;
+
+}
+
+.spe-item{
+    display: flex;
+    margin-top: 5em;
+}
+
+//////equipe perso
+
+.blocteamitem__title1{
+    @include title;
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+.blocteamitem__img{
+    width: 18.5%;
+    height: auto;
+    margin-left:$margin;
+}
+
+.blocteamitem__flex{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 5em;
+}
+
+.blocteam__divcontent{
+    margin-left: 3%;
+}
+
+.blocteamitem__back{
+   @include button;
+    background-color: $pink;
+    margin-left: $margin;
+    display: inline-block;
+    margin-top: 5em;
+}
+
+.blocteamitem__title2{
+    font-size: 2vw;
+    font-weight: 100;
+    color: $pink;
+    margin-bottom: .5em;
+    /*    border-bottom: 1px solid lightgrey;
+        padding-bottom: .5em;*/
+}
+
+.blocteamitem__title3{
+    text-transform: uppercase;
+    font-size: 1.6vw;
+    font-weight: 800;
+    color: dimgrey;
+}
+
+.blocteamitem__text{
+    @include text;
+    margin-bottom: 1.5em;
+}
+
+.blocteamitem{
+    margin-bottom: 20em;
+}
+
+//////Contact
+
+.bloccontact__flex{
+    display: flex;
+    justify-content: space-between;
+    margin: 20em 25%;
+}
+
+.bloccontact__title1{
+    @include title;
+    margin-left: initial;
+    margin-top: initial;
+    border-bottom: 3px solid $blue;
+}
+
+.bloccontact__text{
+    font-size: 1.3vw;
+    color: dimgrey;
+    font-weight: 100;
+    margin-bottom: 1.3em;
+    line-height: $lineheight;
+}
+
+.bloccontact__flex__column{
+    display: flex;
+    flex-direction: column;
+}
+
+.bloccontact__form__label{
+    font-weight: 100;
+    font-size: 1.2vw;
+    margin-bottom: .8em;
+    color: $blue;
+}
+
+.bloccontact__form__input, .bloccontact__form__textarea{
+    border: 1px solid $blue;
+    padding: .8em 5%;
+    margin-bottom: 2em;
+    width: 250px;
+}
+
+.bloccontact__form{
+    margin-top: 10em;
+}
+
+.bloccontact__form__input--submit{
+    @include button;
+    background-color: $blue;
+    padding: .6em 8%;
+    margin-top: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
