@@ -4,26 +4,23 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Nous contacter | 1002 pattes</title>
-        <meta name="description" content="">
+        <meta name="description" content="Le site de l'asbl 'La maison du 1002 pattes'">
+        <meta name="keywords" content="jeunesse, aide, asbl, bastogne, famille, jeunes, adolescentes, enfants">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
 
-        <link rel="stylesheet" href="../assets/css/normalize.css">
         <link rel="stylesheet" href="../assets/css/bundle.css">
     </head>
     <body>
-    <h1 class="hidden">
-        Toutes les informations pour nous contacter
-    </h1>
     <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
     <header class="blocheader">
-        <h2 class="hidden">
-            En savoir d'avantage sur nous
-        </h2>
+        <h1 class="hidden">
+            Le site de l'asbl "La maison du 1002 pattes"
+        </h1>
         <div class="blocheader__flex">
             <div class="blocheader__flex__logo logo">
                 <a href="../index.html" class="logo__link">
@@ -62,59 +59,69 @@
             </div>
         </div>
     </header>
-    <div class="bloccontact__flex">
-        <section class="bloccontact">
-            <h2 class="bloccontact__title1">
-                Nous contacter
-            </h2>
-            <p class="bloccontact__text">
-                Route de Neufchâteau 73 R2<br>
-                6600 Bastogne
-            </p>
-            <p class="bloccontact__text">
-                +32 (0)61/46.60.08
-            </p>
-            <p class="bloccontact__text">
-                Par téléphone le lundi entre 10h - 12h<br>
-                et 13h -16h et le jeudi entre 10h - 12h
-            </p>
-            <p class="bloccontact__text">
-                N° d’entreprise : 0525.690.609
-            </p>
-            <p class="bloccontact__text">
-                N° de compte : BE16 0016 9474 2974
-            </p>
+    <div id="main">
+        <section>
+            <h1 class="hidden">
+                Toutes les informations pour nous contacter
+            </h1>
         </section>
-        <section class="bloccontact__form">
+        <div class="bloccontact__flex">
+            <section class="bloccontact">
+                <h2 class="bloccontact__title1">
+                    Nous contacter
+                </h2>
+                <p class="bloccontact__text">
+                    Route de Neufchâteau 73 R2<br>
+                    6600 Bastogne
+                </p>
+                <p class="bloccontact__text">
+                    +32 (0)61/46.60.08
+                </p>
+                <p class="bloccontact__text">
+                    Par téléphone le lundi entre 10h - 12h<br>
+                    et 13h -16h et le jeudi entre 10h - 12h
+                </p>
+                <p class="bloccontact__text">
+                    N° d’entreprise : 0525.690.609
+                </p>
+                <p class="bloccontact__text">
+                    N° de compte : BE16 0016 9474 2974
+                </p>
+            </section>
+            <section class="bloccontact__form">
+                <h2 class="hidden">
+                    Formulaire de contact
+                </h2>
+                <form action="#" method="POST" class="bloccontact__form__flex">
+                    <div class="bloccontact__flex__column">
+                        <label for="nom" class="bloccontact__form__label">Nom</label>
+                        <input type="text" name="nom" id="nom" class="bloccontact__form__input">
+                    </div>
+                    <div class="bloccontact__flex__column">
+                        <label for="email" class="bloccontact__form__label">Email</label>
+                        <input type="text" id="email" name="email" class="bloccontact__form__input">
+                    </div>
+                    <div class="bloccontact__flex__column">
+                        <label for="message" class="bloccontact__form__label">Message</label>
+                        <textarea name="message" id="message" cols="30" rows="10" class="bloccontact__form__textarea"></textarea>
+                    </div>
+                    <input type="submit" value="Envoyer" class="bloccontact__form__input--submit">
+                </form>
+            </section>
+        </div>
+        <section class="blocactiv-space">
             <h2 class="hidden">
-                Formulaire de contact
+                Les activitées organisées par l'asbl
             </h2>
-            <form action="#" method="POST" class="bloccontact__form__flex">
-                <div class="bloccontact__flex__column">
-                    <label for="nom" class="bloccontact__form__label">Nom</label>
-                    <input type="text" name="nom" id="nom" class="bloccontact__form__input">
-                </div>
-                <div class="bloccontact__flex__column">
-                    <label for="email" class="bloccontact__form__label">Email</label>
-                    <input type="text" id="email" name="email" class="bloccontact__form__input">
-                </div>
-                <div class="bloccontact__flex__column">
-                    <label for="message" class="bloccontact__form__label">Message</label>
-                    <textarea name="message" id="message" cols="30" rows="10" class="bloccontact__form__textarea"></textarea>
-                </div>
-                <input type="submit" value="Envoyer" class="bloccontact__form__input--submit">
-            </form>
+            <div class="blocactiv-space__divimg">
+                &nbsp;
+            </div>
+            <p class="blocactiv-space__text">
+                Nous mettons en place des activitées pour les enfants et leurs familles
+            </p>
+            <a href="../index.html" class="blocactiv-space__link">Nos activitées</a>
         </section>
     </div>
-    <section class="blocpropos-space">
-        <h2 class="hidden">
-            À propos de nous
-        </h2>
-        <p class="blocpropos-space__text">
-            Notre asbl a pour objectif de recevoir des enfants, des adolescents et des familles en difficultés : relationnelles, émotionnelles, d’apprentissage scolaire, pédopsychiatriques… y compris les situations où un enfant est porteur d’un handicap d’ordre mental ou physique.
-        </p>
-        <a href="apropos.html" class="blocpropos-space__link">Nous découvrir</a>
-    </section>
     <footer class="blocfooter">
         <div itemscope itemtype="http://schema.org/Corporation" class="blocfooter__content">
             <p class="blocfooter__text" itemprop="legalName">La maison du 1002 pattes</p>

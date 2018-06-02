@@ -1,8 +1,24 @@
+@import "normalise";
 @import "variables";
 @import "mixins";
+
+@font-face {
+  font-family: 'swagger';
+  src: url("../fonts/swaggerlight.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'swaggerb';
+    src: url("../fonts/swaggerbold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("../fonts/opensanslight.woff") format("woff");
+}
 body{
     font-size: 62.5%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', arial, sans-serif;
     max-width: 100%;
 }
 .hidden{
@@ -27,14 +43,12 @@ body{
 }
 
 .blocheader__desc__img{
-    background: url("../images/child.jpeg") center no-repeat;
-    background-size:cover;
-    margin-top: 3em;
-    padding-bottom: 40%;
+    background: url("../images/child.jpeg")center bottom no-repeat;
+    background-size: cover;
+    padding-bottom: 60em;
 }
 
 .croop{
-    //background: url("../images/child.jpeg") top no-repeat;
     padding-bottom: 10%;
     background-position: top;
 }
@@ -44,8 +58,8 @@ body{
 }
 
 .blocheader__desc__text{
-    font-size: 2.8vw;
-    width: 80%;
+    font-size: 3.3em;
+    width: 60%;
     font-weight: 100;
     color: rgb(47,47,47);
     line-height: 2;
@@ -57,18 +71,20 @@ body{
 
 .logo__link{
     display: block;
-    width: 80%;
+    width: 105px;
+    height: 128px;
     margin: 3em 0 0 3em;
 }
 
 .logo__img{
-    width: 100%;
+    width: 80%;
     height: auto;
 }
 
 .blocheader__nav__list{
     display: flex;
-    margin-right: 2em;
+    align-items: center;
+    margin-right: 4em;
 }
 
 .list__item{
@@ -91,6 +107,17 @@ body{
 }
 .link--noborder{
     border-right: none;
+    background-color: $pink;
+    display: inline-block;
+    width: 63%;
+    color: white;
+    border-radius: 50px;
+    padding: .5em 1.3em;
+    margin-left: 15%;
+}
+
+.link--noborder:hover{
+    background-color: $pink_dark;
 }
 
 ///////////////////////////////////////////////////////END_Accueil_header
@@ -207,7 +234,7 @@ body{
     margin: 0 $margin 8em;
 }
 .blocactiv__content__title1{
-    font-size: 4vw;
+    font-size: 4.5em;
     text-transform: uppercase;
     letter-spacing: 5px;
     margin-left: 0;
@@ -216,13 +243,16 @@ body{
     margin-bottom: .5em;
 }
 
-.blocactiv__img{
-    width: 150%;
-    height: auto;
+
+.blocactiv__divimg{
+    background: url("../images/activitees.jpg")no-repeat;
+    background-size: contain;
+    padding: 20%;
+    margin-bottom: 4em;
 }
 
 .blocactiv__info{
-    margin: 3em 0 0 20em;
+    margin: 3em 0 0 10em;
     width: 90%;
     border-left: 1px solid lightgrey;
     padding-left: 8em;
@@ -231,10 +261,9 @@ body{
 .blocactiv__info__title2{
     color: dimgrey;
     letter-spacing: 1px;
-    font-weight: 700;
-    font-size: 2vw;
+    font-size: 3.1em;
     margin-bottom: 1.3em;
-    font-family: $font;
+    font-family: $fontbold;
 }
 
 .blocactiv__info__text{
@@ -259,6 +288,7 @@ body{
 .blocsponsor__list{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .sitem__img{
@@ -301,6 +331,76 @@ body{
     //margin-bottom: 10em;
 }
 
+.blochelp__select{
+    border:none;
+    background: transparent;
+    -webkit-appearance: none;
+    height: 40px;
+    border-radius: 0;
+    padding: 5px;
+    font-size: 2em;
+    line-height: 1;
+    width: 450px;
+    color: dimgrey;
+    font-weight: 100;
+
+}
+
+.blochelp__divselect{
+    margin: 8em auto 15em;
+    width: 380px;
+    height: 40px;
+    overflow: hidden;
+    background: url("../images/angle-down.svg") no-repeat right;
+    border-bottom: 2px solid $blue;
+}
+
+.blochelp__ills{
+    text-align: center;
+    margin-bottom: 25em;
+}
+
+.ill:nth-child(odd){
+    background-color: rgba(127,163,162, 0.5);
+}
+
+.ill:nth-child(odd) .ill__description p{
+    color:black;
+}
+
+.ill{
+    //margin: 1em 0;
+    //padding: 2.5em 0;
+}
+
+
+.ill__name{
+    font-family: $font;
+    font-size: 3.5em;
+    display: inline-block;
+    margin: 2em 0;
+    padding: 3%;
+}
+
+.ill__name:hover{
+    cursor: pointer;
+}
+
+.ill__description{
+    font-size: 2em;
+    line-height: $lineheight;
+    color: dimgrey;
+    margin: 0em $margin;
+}
+
+.ill__description p{
+    margin-bottom: 2em;
+}
+
+
+
+
+
 ///////////////////////////////////////////////////////END_Accueil_Equipe_help
 ///////////////////////////////////////////////////////Accueil_footer
 
@@ -318,8 +418,8 @@ body{
 }
 
 .blocfooter__img{
-    width: 7%;
-    height: auto;
+    width: 105px;
+    height: 128px;
     display: block;
     margin: 0em auto 8em;
 }
@@ -342,6 +442,7 @@ body{
 
 .blochelp__title1, .blochelp-nojs__title1{
     @include title;
+    border-bottom: 3px solid $blue;
 
 }
 
@@ -352,7 +453,7 @@ body{
 
 .blochelp__title2{
     text-transform: uppercase;
-    font-size: 2.5vw;
+    font-size: 4em;
     letter-spacing: 1px;
     color: dimgrey;
     text-align: center;
@@ -362,7 +463,7 @@ body{
 
 .blochelp-nojs__text2{
     margin: 0 $margin 2em;
-    font-size: 1.8vw;
+    font-size: 2.2em;
     letter-spacing: 1px;
     color: dimgrey;
     margin-top: 4em;
@@ -385,6 +486,7 @@ body{
 .hnjitem__text{
     @include text;
     margin-left: 0;
+    margin-bottom: 2em;
 }
 
 .hnjitem__span{
@@ -400,6 +502,14 @@ body{
     background-color: $blue;
     display: inline-block;
     margin-bottom: 5em;
+    font-size: .8em;
+    padding: .5em 2em;
+}
+
+.knjlink{
+    @include button;
+    background-color: $blue;
+    display: inline-block;
 }
 
 .hnjitem{
@@ -434,7 +544,7 @@ body{
 
 .blocdons-space__text{
     font-family: $font;
-    font-size: 2.5vw;
+    font-size: 3.5em;
     color: dimgrey;
     margin: 3em 0 2em;
 }
@@ -476,6 +586,34 @@ body{
     margin: 10em 0;
 }
 
+.blocproposII-space{
+  text-align: center;
+}
+.blocproposII-space__divimg{
+  background: url("../images/spacesecre.jpg") center no-repeat fixed;
+  background-size: cover;
+  padding: 15%;
+}
+
+.blocproposII-space__name{
+  font-size: 5vw;
+  font-family: $font;
+  color: black;
+}
+
+.blocproposII-space__text{
+  @include text;
+  margin: 5em auto 4em;
+  display: block;
+  width: 60%;
+}
+
+.blocproposII-space__link{
+  @include button
+  background-color: $pink;
+  display: inline-block;
+  margin-bottom: 8em;
+}
 .blocteamII-space__divborder{
     text-align: center;
     margin: 0 $margin;
@@ -488,7 +626,7 @@ body{
 }
 
 .blocteamII-space__icons i{
-    font-size: 5vw;
+    font-size: 5em;
     color: black;
     margin: 0em 1.8em 1.3em 1.8em;
     position: relative;
@@ -506,7 +644,7 @@ body{
 
 .blocteamII-space__text{
     font-family: $font;
-    font-size: 2vw;
+    font-size: 3em;
     padding: 0 $margin;
     line-height: $lineheight;
     margin-bottom: 3em;
@@ -535,7 +673,7 @@ body{
 
 .blocteam__spe__title1{
     text-transform: uppercase;
-    font-size: 1.8vw;
+    font-size: 2em;
     color: $pink;
     margin: 2em $margin;
     position: relative;
@@ -553,14 +691,11 @@ body{
 
 .blocteam__spe__text{
     @include text;
-
 }
 
 .spe-item__img{
-    border-radius: 50%;
     max-width: 100%;
-    width: 120px;
-    height: 120px;
+    height: auto;
     margin-right: 2em;
 }
 
@@ -571,27 +706,33 @@ body{
 
 .spe-item__link {
     display: block;
-    width: 100%;
-    height: 25px;
+    font-size: 1.3vw;
     text-decoration: none;
-    margin-top: 4em;
     color: $pink;
-    margin-right: 5em;
-
+    position: relative;
 }
 
 .spe-item__text{
-    font-size: 1.3vw;
-    //width: 100%;
-    border-bottom: 1px solid $pink;
-    padding: .3em 0;
+    opacity: 0;
+    position: absolute;
+    top: 90px;
+    left: 30px;
+    text-transform: uppercase;
+}
 
+.spe-item__div:hover > .spe-item__img{
+    opacity: 0.1;
+    transition: 0.3s;
+}
+.spe-item__div:hover > .spe-item__text{
+    opacity: 1;
+    transition: 0.3s;
 }
 
 .spe-item{
-    display: flex;
     margin-top: 5em;
 }
+
 
 //////equipe perso
 
@@ -602,7 +743,7 @@ body{
 }
 
 .blocteamitem__img{
-    width: 18.5%;
+    width: 35%;
     height: auto;
     margin-left:$margin;
 }
@@ -626,17 +767,16 @@ body{
 }
 
 .blocteamitem__title2{
-    font-size: 2vw;
+    font-size: 3em;
     font-weight: 100;
     color: $pink;
     margin-bottom: .5em;
-    /*    border-bottom: 1px solid lightgrey;
-        padding-bottom: .5em;*/
+    margin-top: 2em;
 }
 
 .blocteamitem__title3{
     text-transform: uppercase;
-    font-size: 1.6vw;
+    font-size: 2.4em;
     font-weight: 800;
     color: dimgrey;
 }
@@ -655,7 +795,7 @@ body{
 .bloccontact__flex{
     display: flex;
     justify-content: space-between;
-    margin: 20em 25%;
+    margin: 20em 22%;
 }
 
 .bloccontact__title1{
@@ -666,7 +806,7 @@ body{
 }
 
 .bloccontact__text{
-    font-size: 1.3vw;
+    font-size: 1.8em;
     color: dimgrey;
     font-weight: 100;
     margin-bottom: 1.3em;
@@ -680,9 +820,10 @@ body{
 
 .bloccontact__form__label{
     font-weight: 100;
-    font-size: 1.2vw;
+    font-size: 1.5em;
     margin-bottom: .8em;
     color: $blue;
+    text-transform: uppercase;
 }
 
 .bloccontact__form__input, .bloccontact__form__textarea{
@@ -693,15 +834,179 @@ body{
 }
 
 .bloccontact__form{
-    margin-top: 10em;
+    margin-top: 8em;
 }
 
-.bloccontact__form__input--submit{
+.bloccontact__form__input--submit {
     @include button;
     background-color: $blue;
     padding: .6em 8%;
     margin-top: 1em;
 }
+
+.blocactiv-space__divimg{
+    background: url("../images/activiteeII.jpg") no-repeat;
+    background-size: cover;
+    padding: 15%;
+}
+
+.blocactiv-space{
+    text-align: center;
+}
+
+.blocactiv-space__text{
+    font-family: $font;
+    font-size: 3em;
+    color: dimgrey;
+    margin: 2em 0;
+}
+
+
+.blocactiv-space__link{
+    @include button
+    background-color: $blue;
+    display: inline-block;
+    margin-bottom: 10em;
+}
+
+////Dons
+
+.blocdons__info{
+    text-align: center;
+    margin-bottom: 8em;
+}
+
+.blocdons__title1{
+    font-size: 40px;
+    font-weight: 100;
+    color: black;
+    position: relative;
+    top: 250px;
+    left: 0px;
+}
+
+.blocdons__text--merci{
+    font-size: 25vw;
+    text-transform: uppercase;
+    color: $blue;
+    opacity: 0.2;
+    font-weight: 400;
+    position: relative;
+    top: 0px;
+    left:  0px;
+}
+
+.blocdons__text{
+    @include text;
+}
+
+.catch{
+    font-size: 2em;
+}
+
+.catch:after{
+    display: block;
+    content: '';
+    height: 1px;
+    background-color: dimgrey;
+    width: 200px;
+    margin: 1em auto;
+}
+
+.locaux{
+    width: 60%;
+    display: block;
+    margin: 0 auto 6em;
+}
+
+.compte{
+    background-color: $blue;
+    width: 50%;
+    margin: 0 auto;
+    color: white;
+    padding: 2em 0;
+}
+
+.compte span{
+    font-weight: 700;
+    color: white;
+    margin-top: 1em;
+    display: inline-block;
+}
+
+.blocdons{
+    margin-bottom: 10em;
+}
+
+.blocdons__title2{
+    @include title;
+    border: none;
+    position: relative;
+
+}
+
+.blocdons__list{
+    margin-top: 10em;
+}
+
+.blocdons__title2:after{
+    content:'';
+    background: url("../images/arrow.png") no-repeat;
+    background-size: 30%;
+    width: 100%;
+    height: 390px;
+    position: absolute;
+    top: 35%;
+    left: 100%;
+    margin-left: 5%;
+}
+
+.ditem{
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.ditem:not(:last-child){
+    border-bottom: 1px solid lightgrey;
+}
+
+.ditem__title1{
+    font-size: 3em;
+    color: black;
+    padding: 3% 0;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+
+/*.ditem:nth-child(odd){
+    background-color: rgba(127,163,162, 0.5);
+}*/
+
+.ditem__link{
+    @include button;
+    background-color: $blue;
+    font-size: 1.5em;
+    display: inline-block;
+    margin-bottom: 4em;
+}
+
+.ditem__text{
+    margin-bottom: 3em;
+    font-size: 1.8em;
+}
+
+.burgercss{
+  display: none;
+}
+
+#burger{
+  visibility: hidden;
+}
+
+@import "responsive";
+
+
+
 
 
 

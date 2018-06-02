@@ -1,5 +1,4 @@
 require("./scss/main.scss");
-//require("./scss/responsive.scss")
 
 document.querySelector("html").classList.remove("no-js");
 document.querySelector("html").classList.add("js");
@@ -18,11 +17,11 @@ const patho = [
     },
     {
         name: 'Difficultés pathologiques',
-        description: '<p class="hnjitem__text"> Réalise un accompagnement et un suivi thérapeutique d‘enfants et adolescents, ainsi que leurs parents, dans le cadre de difficultés psychologiques <span class="hnjitem__span"> Notre équipe compte 2 psychologues/psychothérapeutes</span></p><a href="https://www.participate-autisme.be/fr/index.cfm" class="hnjitem__button">Venez découvrir notre équipe</a>',
+        description: '<p> Réalise un accompagnement et un suivi thérapeutique d‘enfants et adolescents, ainsi que leurs parents, dans le cadre de difficultés psychologiques <span class="hnjitem__span"> Notre équipe compte 2 psychologues/psychothérapeutes</span></p><a href="https://www.participate-autisme.be/fr/index.cfm" class="hnjitem__button">Venez découvrir notre équipe</a>',
     },
     {
         name:'Difficultés communicationnelles',
-        description: '<p class="hnjitem__text">L’orthophoniste-logopède, thérapeute de la communication et du langage, intervient pour toutes les pathologies de la parole, de la voix et du langage oral et écrit, quelle que soit leur origine, chez l’enfant, l‘adolescent, l‘adulte et la personne âgée. Il est le thérapeute qui assume la responsabilité de la prévention, de l‘évaluation, du traitement et de l‘étude scientifique des troubles de la communication humaine et des troubles associés. Dans ce contexte, la communication englobe toutes les fonctions associées à la compréhension et à l‘expression du langage oral et écrit, ainsi qu’à toutes les formes appropriées de la communication non-verbale.<span class="hnjitem__span">Notre équipe compte 2 logopèdes</span></p><a href="equipe.html" class="hnjitem__button">Venez découvrir notre équipe</a>',
+        description: '<p>L’orthophoniste-logopède, thérapeute de la communication et du langage, intervient pour toutes les pathologies de la parole, de la voix et du langage oral et écrit, quelle que soit leur origine, chez l’enfant, l‘adolescent, l‘adulte et la personne âgée. Il est le thérapeute qui assume la responsabilité de la prévention, de l‘évaluation, du traitement et de l‘étude scientifique des troubles de la communication humaine et des troubles associés. Dans ce contexte, la communication englobe toutes les fonctions associées à la compréhension et à l‘expression du langage oral et écrit, ainsi qu’à toutes les formes appropriées de la communication non-verbale.<span class="hnjitem__span">Notre équipe compte 2 logopèdes</span></p><a href="equipe.html" class="hnjitem__button">Venez découvrir notre équipe</a>',
     },
     {
         name:'Fonctions motrices et/ou psychiques',
@@ -37,16 +36,20 @@ const patho = [
         description:'<p>L’aide spécialisée apportée aux jeunes et aux familles en Communauté française se présente comme une combinaison fort originale entre des services publics et des services d’initiative privée, c’est-à-dire associative.</p><p>Dans le champ de l’aide à la jeunesse, les services publics interviennent là où ils le doivent et rien que là. Lorsqu’il s’agit de garantir le respect de certains droits fondamentaux, la continuité du service et lorsque le besoin à rencontrer implique une part de contrôle de la société sur les individus, l’action est menée directement par des services publics : c’est bien le cas à propos des interventions garanties par des autorités, comme les SAJ et SPJ et lorsque l’éducation passe par une part de contrainte, comme celle qu’assument les IPPJ.</p><p>Dans tous les autres cas, l’aide à la jeunesse a choisi de recourir à l’initiative privée associative, qui partage avec les services  publics une philosophie commune de désintéressement. Le recours à l’initiative privée associative est très important dans ce secteur, puisqu’il y a environ quatre fois plus de travailleurs dépendant de services privés que d’agents de services publics.<span class="hnjitem__span">Nos collègues "aide à la jeunesse" sont spécialisés dans l‘aide à la jeunesse</span></p><a href="http://www.aidealajeunesse.cfwb.be/index.php" class="hnjitem__button">Visiter leur site</a>',
     },
     {
-        name:'Service d‘accompagnement',
+        name:"Service d'accompagnement",
         description:'<p>Les services d\'accompagnement provinciaux Alter & GO offrent un accompagnement adapté et individualisé à la personne en situation de handicap tout au long de son parcours de vie. Cela représente plus de 300 personnes suivies sur l\'ensemble de la province de Luxembourg.</p><p>L\'accompagnement proposé par les différents services s\'effectue en fonction de la demande et du projet de la personne. Les équipes sont donc mobiles et peuvent intervenir au domicile, à l\'école, sur un lieu de loisir, sur un lieu de travail pour une intégration professionnelle et à bien d\'autres endroits encore selon le projet.</p><p>C\'est une structure proche des citoyens qui place le processus participatif des familles et des bénéficiaires au cœur du projet. Cela peut prendre la forme d\'un conseil consultatif, d\'une réunion de parents, d\'évaluations, d\'enquêtes, etc.<span class="hnjitem__span">Nos collègues de "Alter & Go" sont spécialisés dans le service d\'accompagnement.</span></p><a href="http://www.province.luxembourg.be/fr/alter-go.html?IDC=5092#.Wt-nWtNubBJ" class="hnjitem__button">Visiter leur site</a>',
     },
     {
         name:' Assuétudes ',
-        description:'<p>Solaix est un centre de consultation et de suivi ambulatoire pour les personnes dépendantes et leur entourage. Il s’agit d’un lieu d’accueil et d’accompagnement psychosocial et médical pour toute personnes confrontées de loin ou de près à la problématique de consommation de drogues, alcool, médicaments...<span>Nos collègues de \"Solaix\" sont spécialisés dans les assuétudes.</span></p><a href=\"http://www.solaix.be/\" class=\"hnjitem__button\">Visiter leur site</a>',
+        description:'<p>Solaix est un centre de consultation et de suivi ambulatoire pour les personnes dépendantes et leur entourage. Il s’agit d’un lieu d’accueil et d’accompagnement psychosocial et médical pour toute personnes confrontées de loin ou de près à la problématique de consommation de drogues, alcool, médicaments...<span class="hnjitem__span">Nos collègues de \"Solaix\" sont spécialisés dans les assuétudes.</span></p><a href=\"http://www.solaix.be/\" class=\"hnjitem__button\">Visiter leur site</a>',
     },
     {
         name:'Pédopsychiatrique',
         description:'<p>La Plate-forme de Concertation en Santé Mentale est une ASBL, créée le 24 juin 1993, en vue de mener la concertation entre les acteurs du champ de la santé mentale sur le territoire de la province de Luxembourg. Elle dispose également d’un service de médiation compétent pour traiter les plaintes relatives à l’application des droits du patient dans certaines institutions de soins.<span class="hnjitem__span">Nos collègues de "Maltida" sont spécialisés dans la pédopsychiatrie.</span></p><a href="http://www.plateformepsylux.be/" class="hnjitem__button">Visiter leur site</a>',
+    },
+    {
+        name:'Santé et action sociale',
+        description: '<p> De nombreuses compétences en matière de Santé et d’Action sociale sont transférées aux Régions, marquant ainsi un tournant majeur dans la gestion des mécanismes de protection sociale de notre pays. Consciente de cet enjeu primordial pour la population, la Wallonie a tout mis en œuvre pour créer un organisme d’intérêt public (OIP) autonome gérant les compétences de la santé, du bien-être, de l’accompagnement des personnes âgées, du handicap et des allocations familiales.</p><span class="hnjitem__span">Nos collègues de "L‘aviq" sont spécialisés dans le bien-être et à la santé de tous.</span></p><a href="https://www.aviq.be/" class="hnjitem__button">Visiter leur site</a>',
     },
 ];
 

@@ -5,13 +5,13 @@
   text-transform: uppercase;
   letter-spacing: 0.04em;
   font-weight: 100;
-  font-size: 1vw;
-  padding: 1em 2%;
+  font-size: 1.3em;
+  padding: 1em 2em;
 }
 @mixin title{
   color: dimgrey;
   margin: 5em $margin 1.5em;
-  font-size: 2.5vw;
+  font-size: 3em;
   font-weight: 100;
   display: inline-block;
   font-family: $font;
@@ -20,7 +20,7 @@
 }
 
 @mixin text{
-  font-size: 1.2vw;
+  font-size: 1.8em;
   font-weight: 100;
   line-height: $lineheight;
   color: dimgrey;
