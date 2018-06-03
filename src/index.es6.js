@@ -78,7 +78,7 @@ document.addEventListener("click", (e)=>{
 function showIll(anchor) {
     const illEl = document.querySelector(anchor);
     if(!illEl)return;
-    illEl.scrollIntoView();
+    illEl.scrollIntoView({behavior: "smooth"});
     illEl.classList.add("active");
 }
 

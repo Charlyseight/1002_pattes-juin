@@ -23,11 +23,18 @@
             Le site de l'asbl "La maison du 1002 pattes"
         </h1>
         <div class="blocheader__flex">
-            <div class="blocheader__flex__logo logo">
-                <a href="../index.html" class="logo__link">
-                    <img src="../assets/images/logo-2.jpg" alt="Logo 1002 pattes" width="105" height="128" class="logo__img">
+            <div class="blocheader__flex__logo logo" itemscope itemtype="http://schema.org/Organization">
+                <a href="#" class="logo__link">
+                    <img itemprop="logo" src="../assets/images/logo-2.jpg" alt="Logo 1002 pattes" width="105" height="128" class="logo__img">
+                    <meta itemprop="url" content="http://lamaisondu1002pattes.be">
                 </a>
             </div>
+            <input id="burger" type="checkbox" class="checkbox">
+            <label for="burger" class="burgercss">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
             <nav class="blocheader__nav">
                 <h2 class="hidden">Ma navigation principale</h2>
                 <ul class="blocheader__nav__list list">
@@ -53,8 +60,8 @@
             </nav>
         </div>
         <div class="blocheader__desc__img croop">
-            <div itemscope itemtype="http://schema.org/Corporation" class="blocheader__desc">
-                <p itemprop="description" class=" blocheader__desc__text">
+            <div itemscope itemtype="http://schema.org/Organization" class="blocheader__desc">
+                <p itemprop="description" class=" blocheader__desc__text up">
                     Nous sommes une asbl qui aide les enfants, adolescents et familles en difficultées.
                 </p>
             </div>
@@ -107,17 +114,20 @@
             </div>
         </section>
     </div>
-        <footer class="blocfooter">
-            <div itemscope itemtype="http://schema.org/Corporation" class="blocfooter__content">
-                <p class="blocfooter__text" itemprop="legalName">La maison du 1002 pattes</p>
+    <footer class="blocfooter">
+        <div itemscope itemtype="http://schema.org/Organization" class="blocfooter__content">
+            <p class="blocfooter__text" itemprop="legalName">La maison du 1002 pattes</p>
+        </div>
+        <img src="../assets/images/logo-2.jpg" alt="logo 1002 pattes" width="105" height="128" class="blocfooter__img">
+        <div class="blocfooter__flex" itemscope itemtype="http://schema.org/Organization">
+            <div itemprop="address">
+                <p class="blocfooter__flex--adresse fitem">Route de Neufchâteau 73 Bastogne</p>
+                <meta itemprop="name" content="La maison du 1002 pattes">
             </div>
-            <img src="../assets/images/logo-2.jpg" alt="logo 1002 pattes" width="105" height="128" class="blocfooter__img">
-            <div class="blocfooter__flex" itemscope itemtype="http://schema.org/Corporation">
-                <p class="blocfooter__flex--adresse fitem" itemprop="adress">Route de Neufchâteau 73 Bastogne</p>
-                <p class="blocfooter__flex--tel fitem" itemprop="telephone">+32 (0)61/46.60.08</p>
-                <p class="blocfooter__flex--compte fitem">N° de compte : BE16 0016 9474 2974</p>
-            </div>
-        </footer>
+            <p class="blocfooter__flex--tel fitem" itemprop="telephone">+32 (0)61/46.60.08</p>
+            <p class="blocfooter__flex--compte fitem">N° de compte : BE16 0016 9474 2974</p>
+        </div>
+    </footer>
     <script src="../assets/js/bundle.js"></script>
     </body>
 </html>

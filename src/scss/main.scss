@@ -185,7 +185,7 @@ body{
 .blocteamI-space__text{
     display: inline;
     float: left;
-    font-size: 2.8vw;
+    font-size: 4em;
     font-weight: 100;
     margin-left: 15%;
     color: dimgrey;
@@ -206,7 +206,7 @@ body{
 .blocteamI-space__text--word{
     line-height:40px;
     margin:0;
-    font-size: 2.1vw;
+    font-size: 3em;
     color: $pink;
     font-weight: 700;
     text-transform: uppercase;
@@ -378,8 +378,8 @@ body{
     font-family: $font;
     font-size: 3.5em;
     display: inline-block;
-    margin: 2em 0;
-    padding: 3%;
+    //margin: 2em 0;
+    padding: 2em 40%;
 }
 
 .ill__name:hover{
@@ -506,10 +506,11 @@ body{
     padding: .5em 2em;
 }
 
-.knjlink{
+.hnjlink{
     @include button;
     background-color: $blue;
     display: inline-block;
+    margin-bottom: 2.8em;
 }
 
 .hnjitem{
@@ -551,11 +552,13 @@ body{
 
 .blocdons-space__link{
     @include button;
-    background-color: $blue_dark;
+    background-color: $blue;
     margin-bottom: 15em;
     display: inline-block;
+}
 
-
+.blocdons-space__link:hover{
+    background-color: $blue_dark;
 }
 
 
@@ -609,10 +612,14 @@ body{
 }
 
 .blocproposII-space__link{
-  @include button
+  @include button;
   background-color: $pink;
   display: inline-block;
   margin-bottom: 8em;
+}
+
+.blocproposII-space__link:hover{
+    background-color: $pink_dark;
 }
 .blocteamII-space__divborder{
     text-align: center;
@@ -637,7 +644,7 @@ body{
     content: "";
     height: 1px;
     background-color: black;
-    width: 100%;
+    width: 50px;
     margin-left: 70px;
     top: 50%;
 }
@@ -718,6 +725,7 @@ body{
     top: 90px;
     left: 30px;
     text-transform: uppercase;
+    font-size: 1em;
 }
 
 .spe-item__div:hover > .spe-item__img{
@@ -795,7 +803,7 @@ body{
 .bloccontact__flex{
     display: flex;
     justify-content: space-between;
-    margin: 20em 22%;
+    margin: 20em 23%;
 }
 
 .bloccontact__title1{
@@ -828,9 +836,11 @@ body{
 
 .bloccontact__form__input, .bloccontact__form__textarea{
     border: 1px solid $blue;
-    padding: .8em 5%;
-    margin-bottom: 2em;
-    width: 250px;
+    padding-top: .8em;
+    padding-bottom: .8em;
+    padding-left: 2%;
+    margin-bottom: 1.5em;
+    width: 300px;
 }
 
 .bloccontact__form{
@@ -842,6 +852,10 @@ body{
     background-color: $blue;
     padding: .6em 8%;
     margin-top: 1em;
+}
+
+.bloccontact__form__input--submit:hover{
+    background-color: $blue_dark;
 }
 
 .blocactiv-space__divimg{
@@ -869,6 +883,10 @@ body{
     margin-bottom: 10em;
 }
 
+.blocactiv-space__link:hover{
+    background-color: $blue_dark;
+}
+
 ////Dons
 
 .blocdons__info{
@@ -877,23 +895,17 @@ body{
 }
 
 .blocdons__title1{
-    font-size: 40px;
-    font-weight: 100;
+    font-size: 4em;
     color: black;
-    position: relative;
-    top: 250px;
-    left: 0px;
+    margin: 2em 0 1em;
 }
 
 .blocdons__text--merci{
-    font-size: 25vw;
+    font-size: 25em;
     text-transform: uppercase;
     color: $blue;
     opacity: 0.2;
     font-weight: 400;
-    position: relative;
-    top: 0px;
-    left:  0px;
 }
 
 .blocdons__text{
@@ -902,6 +914,7 @@ body{
 
 .catch{
     font-size: 2em;
+    margin: 3em 0;
 }
 
 .catch:after{
@@ -917,6 +930,7 @@ body{
     width: 60%;
     display: block;
     margin: 0 auto 6em;
+    line-height: $lineheight;
 }
 
 .compte{
@@ -942,6 +956,7 @@ body{
     @include title;
     border: none;
     position: relative;
+    font-size: 4em;
 
 }
 
@@ -954,7 +969,7 @@ body{
     background: url("../images/arrow.png") no-repeat;
     background-size: 30%;
     width: 100%;
-    height: 390px;
+    height: 290px;
     position: absolute;
     top: 35%;
     left: 100%;
@@ -985,22 +1000,30 @@ body{
 .ditem__link{
     @include button;
     background-color: $blue;
-    font-size: 1.5em;
+    font-size: 1.3em;
     display: inline-block;
     margin-bottom: 4em;
+}
+
+.ditem__link:hover{
+    background-color: $blue_dark;
 }
 
 .ditem__text{
     margin-bottom: 3em;
     font-size: 1.8em;
+    color: dimgrey;
 }
 
 .burgercss{
   display: none;
 }
+.checkbox{
+    opacity: 0;
+}
 
-#burger{
-  visibility: hidden;
+.checkbox:checked~.blocheader__nav{
+    display: flex;
 }
 
 @import "responsive";

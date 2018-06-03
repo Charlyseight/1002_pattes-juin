@@ -22,11 +22,18 @@
                 Le site de l'asbl "La maison du 1002 pattes"
             </h1>
             <div class="blocheader__flex">
-                <div class="blocheader__flex__logo logo">
-                    <a href="../index.html" class="logo__link">
-                        <img src="../assets/images/logo-2.jpg" alt="Logo 1002 pattes" width="105" height="128" class="logo__img">
+                <div class="blocheader__flex__logo logo" itemscope itemtype="http://schema.org/Organization">
+                    <a href="#" class="logo__link">
+                        <img itemprop="logo" src="../assets/images/logo-2.jpg" alt="Logo 1002 pattes" width="105" height="128" class="logo__img">
+                        <meta itemprop="url" content="http://lamaisondu1002pattes.be">
                     </a>
                 </div>
+                <input id="burger" type="checkbox" class="checkbox">
+                <label for="burger" class="burgercss">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
                 <nav class="blocheader__nav">
                     <h2 class="hidden">Ma navigation principale</h2>
                     <ul class="blocheader__nav__list list">
@@ -52,8 +59,8 @@
                 </nav>
             </div>
             <div class="blocheader__desc__img croop">
-                <div itemscope itemtype="http://schema.org/Corporation" class="blocheader__desc">
-                    <p itemprop="description" class=" blocheader__desc__text">
+                <div itemscope itemtype="http://schema.org/Organization" class="blocheader__desc">
+                    <p itemprop="description" class=" blocheader__desc__text up">
                         Nous sommes une asbl qui aide les enfants, adolescents et familles en difficultées.
                     </p>
                 </div>
@@ -73,110 +80,112 @@
                     Tous les bureaux, le secrétariat et la salle de psychomotricité sont pourvus d'un ordinateur;                tous les ordinateurs sont gérés par un serveur-réseau. Toutes les thérapeutes sont                           indépendantes. Chaque mois, elles versent à l'ASBL une location qui représente entre                         20 et 30% de leurs rentrées brutes de consultations. A noter que tous les jeudis après-midi,                 c’est bénévolement que tous les thérapeutes se réunissent pour échanger sur les situations                   cliniques prises en charge. L'ASBL a également engagé pour une durée indéterminée une secrétaire             à raison de 13h/semaine et une technicienne de surface à raison de 6h/semaine.
                 </p>
             </section>
-            <section class="blocteam__spe">
-                <h2 class="blocteam__spe__title1">
-                    Nos neuropsychologues
-                </h2>
-                <p class="blocteam__spe__text">
-                    Thérapeute qui est consulté pour des difficultés intellectuelles, attentionnelles                            (attention/concentration), exécutives, de mémoire, de praxies et de langage.
-                </p>
-                <ul class="blocteam__spe__list spe-list">
-                    <li class="spe-item">
-                        <a href="equipeperso.html" class="spe-item__link">
-                            <div class="spe-item__div">
-                                <img src="../assets/images/girl1.png" alt="Portrait d'une jeune femme" class="spe-item__img" width="318" height="200">
-                                <p class="spe-item__text">Gwénaëlle Melchior</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list.item spe-item">
-                        <a href="equipeperso.html" class="spe-item__link">
-                            <div class="spe-item__div">
-                                <img src="../assets/images/girl2.png" alt="Portrait d'une jeune femme " class="spe-item__img" width="318" height="200">
-                                <p class="spe-item__text">Charline Leriche</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="list.item spe-item">
-                        <a href="equipeperso.html" class="spe-item__link">
-                            <div class="spe-item__div">
-                                <img src="../assets/images/girl3.png" alt="Portrait d'une jeune femme" class="spe-item__img" width="318" height="200">
-                                <p class="spe-item__text">Amandine Piron</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <section class="blocteam__spe" >
-                <h2 class="blocteam__spe__title1 psy">
-                    Nos psychologues / psychothérapeutes
-                </h2>
-                <p class="blocteam__spe__text">
-                    Réalise un accompagnement et un suivi thérapeutique d’enfants et adolescents, ainsi que leurs                parents, dans le cadre de difficultés psychologiques.
-                </p>
-                <ul class="blocteam__spe__list spe-list">
-                    <li class="spe-item">
-                        <a href="equipeperso.html" class="spe-item__link">
-                            <div class="spe-item__div">
-                                <img src="../assets/images/girl1.png" alt="Portrait d'une jeune femme" class="spe-item__img" width="318" height="200">
-                                <p class="spe-item__text">Laura Mespouille</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="spe-item">
-                        <a href="equipeperso.html" class="spe-item__link">
-                            <div class="spe-item__div">
-                                <img src="../assets/images/girl2.png" alt="Portrait d'une femme" class="spe-item__img" width="318" height="200">
-                                <p class="spe-item__text">Laure Baillieux</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <section class="blocteam__spe">
-                <h2 class="blocteam__spe__title1">
-                    Nos logopèdes
-                </h2>
-                <p class="blocteam__spe__text">
-                    L’orthophoniste-logopède, thérapeute de la communication et du langage, intervient pour toutes les pathologies de la parole, de la voix et du langage oral et écrit, quelle que soit leur origine, chez l’enfant, l’adolescent, l’adulte et la personne âgée. Il est le thérapeute qui assume la responsabilité de la prévention, de l’évaluation, du traitement et de l’étude scientifique des troubles de la communication humaine et des troubles associés. Dans ce contexte, la communication englobe toutes les fonctions associées à la compréhension et à l’expression du langage oral et écrit, ainsi qu’à toutes les formes appropriées de la communication non-verbale.
-                </p>
-                <ul class="blocteam__spe__list spe-list">
-                    <li class=" spe-item">
-                        <a href="equipeperso.html" class="spe-item__link">
-                            <div class="spe-item__div">
-                                <img src="../assets/images/girl3.png" alt="Portrait d'une jeune femme" class="spe-item__img" width="318" height="200">
-                                <p class="spe-item__text">Sandrine Meurisse</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="spe-item">
-                        <a href="equipeperso.html" class="spe-item__link">
-                            <div class="spe-item__div">
-                                <img src="../assets/images/girl1.png" alt="Portrait d'une jeune femme" class="spe-item__img" width="318" height="200">
-                                <p class="spe-item__text">Emilie Leriche</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <section class="blocteam__spe">
-                <h2 class="blocteam__spe__title1">
-                    Notre psychomotricienne
-                </h2>
-                <p class="blocteam__spe__text">
-                    Le psychomotricien est consulté pour des difficultés psychomotrices, c’est-à-dire qui touchent les fonctions motrices et/ou psychiques (affectivité, comportement, motricité…)
-                </p>
-                <ul class="blocteam__spe__list spe-list">
-                    <li class="spe-item">
-                        <a href="equipeperso.html" class="spe-item__link">
-                            <div class="spe-item__div">
-                                <img src="../assets/images/girl2.png" alt="Portrait d'une jeune femme"  class="spe-item__img" width="318" height="200">
-                                <p class="spe-item__text">Catherine Godfroid</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </section>
+            <div itemscope itemtype="http://schema.org/Organization">
+                <section class="blocteam__spe">
+                    <h2 class="blocteam__spe__title1">
+                        Nos neuropsychologues
+                    </h2>
+                    <p class="blocteam__spe__text">
+                        Thérapeute qui est consulté pour des difficultés intellectuelles, attentionnelles                            (attention/concentration), exécutives, de mémoire, de praxies et de langage.
+                    </p>
+                    <ul class="blocteam__spe__list spe-list">
+                        <li class="spe-item">
+                            <a href="equipeperso.html" class="spe-item__link">
+                                <div class="spe-item__div">
+                                    <img src="../assets/images/girl1.png" alt="Portrait d'une jeune femme" class="spe-item__img" width="318" height="200">
+                                    <p class="spe-item__text" itemprop="member">Gwénaëlle Melchior</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list.item spe-item">
+                            <a href="equipeperso.html" class="spe-item__link">
+                                <div class="spe-item__div">
+                                    <img src="../assets/images/girl2.png" alt="Portrait d'une jeune femme " class="spe-item__img" width="318" height="200">
+                                    <p class="spe-item__text" itemprop="member">Charline Leriche</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="list.item spe-item">
+                            <a href="equipeperso.html" class="spe-item__link">
+                                <div class="spe-item__div">
+                                    <img src="../assets/images/girl3.png" alt="Portrait d'une jeune femme" class="spe-item__img" width="318" height="200">
+                                    <p class="spe-item__text" itemprop="member">Amandine Piron</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="blocteam__spe">
+                    <h2 class="blocteam__spe__title1 psy">
+                        Nos psychologues / psychothérapeutes
+                    </h2>
+                    <p class="blocteam__spe__text">
+                        Réalise un accompagnement et un suivi thérapeutique d’enfants et adolescents, ainsi que leurs                parents, dans le cadre de difficultés psychologiques.
+                    </p>
+                    <ul class="blocteam__spe__list spe-list">
+                        <li class="spe-item">
+                            <a href="equipeperso.html" class="spe-item__link">
+                                <div class="spe-item__div">
+                                    <img src="../assets/images/girl1.png" alt="Portrait d'une jeune femme" class="spe-item__img" width="318" height="200">
+                                    <p class="spe-item__text" itemprop="member">Laura Mespouille</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="spe-item">
+                            <a href="equipeperso.html" class="spe-item__link">
+                                <div class="spe-item__div">
+                                    <img src="../assets/images/girl2.png" alt="Portrait d'une femme" class="spe-item__img" width="318" height="200">
+                                    <p class="spe-item__text" itemprop="member">Laure Baillieux</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="blocteam__spe">
+                    <h2 class="blocteam__spe__title1">
+                        Nos logopèdes
+                    </h2>
+                    <p class="blocteam__spe__text">
+                        L’orthophoniste-logopède, thérapeute de la communication et du langage, intervient pour toutes les pathologies de la parole, de la voix et du langage oral et écrit, quelle que soit leur origine, chez l’enfant, l’adolescent, l’adulte et la personne âgée. Il est le thérapeute qui assume la responsabilité de la prévention, de l’évaluation, du traitement et de l’étude scientifique des troubles de la communication humaine et des troubles associés. Dans ce contexte, la communication englobe toutes les fonctions associées à la compréhension et à l’expression du langage oral et écrit, ainsi qu’à toutes les formes appropriées de la communication non-verbale.
+                    </p>
+                    <ul class="blocteam__spe__list spe-list">
+                        <li class=" spe-item">
+                            <a href="equipeperso.html" class="spe-item__link">
+                                <div class="spe-item__div">
+                                    <img src="../assets/images/girl3.png" alt="Portrait d'une jeune femme" class="spe-item__img" width="318" height="200">
+                                    <p class="spe-item__text" itemprop="member">Sandrine Meurisse</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="spe-item">
+                            <a href="equipeperso.html" class="spe-item__link">
+                                <div class="spe-item__div">
+                                    <img src="../assets/images/girl1.png" alt="Portrait d'une jeune femme" class="spe-item__img" width="318" height="200">
+                                    <p class="spe-item__text" itemprop="member">Emilie Leriche</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="blocteam__spe">
+                    <h2 class="blocteam__spe__title1">
+                        Notre psychomotricienne
+                    </h2>
+                    <p class="blocteam__spe__text">
+                        Le psychomotricien est consulté pour des difficultés psychomotrices, c’est-à-dire qui touchent les fonctions motrices et/ou psychiques (affectivité, comportement, motricité…)
+                    </p>
+                    <ul class="blocteam__spe__list spe-list">
+                        <li class="spe-item">
+                            <a href="equipeperso.html" class="spe-item__link">
+                                <div class="spe-item__div">
+                                    <img src="../assets/images/girl2.png" alt="Portrait d'une jeune femme"  class="spe-item__img" width="318" height="200">
+                                    <p class="spe-item__text" itemprop="member">Catherine Godfroid</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
             <section class="blocproposII-space">
                 <h2 class="hidden">
                     À propos de nous
@@ -191,12 +200,15 @@
             </section>
         </div>
         <footer class="blocfooter">
-            <div itemscope itemtype="http://schema.org/Corporation" class="blocfooter__content">
+            <div itemscope itemtype="http://schema.org/Organization" class="blocfooter__content">
                 <p class="blocfooter__text" itemprop="legalName">La maison du 1002 pattes</p>
             </div>
             <img src="../assets/images/logo-2.jpg" alt="logo 1002 pattes" width="105" height="128" class="blocfooter__img">
-            <div class="blocfooter__flex" itemscope itemtype="http://schema.org/Corporation">
-                <p class="blocfooter__flex--adresse fitem" itemprop="adress">Route de Neufchâteau 73 Bastogne</p>
+            <div class="blocfooter__flex" itemscope itemtype="http://schema.org/Organization">
+                <div itemprop="address">
+                    <p class="blocfooter__flex--adresse fitem">Route de Neufchâteau 73 Bastogne</p>
+                    <meta itemprop="name" content="La maison du 1002 pattes">
+                </div>
                 <p class="blocfooter__flex--tel fitem" itemprop="telephone">+32 (0)61/46.60.08</p>
                 <p class="blocfooter__flex--compte fitem">N° de compte : BE16 0016 9474 2974</p>
             </div>

@@ -20,12 +20,13 @@
                 Le site de l'asbl "La maison du 1002 pattes"
             </h1>
             <div class="blocheader__flex">
-                <div class="blocheader__flex__logo logo" itemscope itemtype="http://schema.org/Corporation">
+                <div class="blocheader__flex__logo logo" itemscope itemtype="http://schema.org/Organization">
                     <a href="#" class="logo__link">
-                        <img src="./assets/images/logo-2.jpg" alt="Logo 1002 pattes" width="105" height="128" itemprop="logo" class="logo__img">
+                        <img itemprop="logo" src="./assets/images/logo-2.jpg" alt="Logo 1002 pattes" width="105" height="128" class="logo__img">
+                        <meta itemprop="url" content="http://lamaisondu1002pattes.be">
                     </a>
                 </div>
-                <input id="burger" type="checkbox" />
+                <input id="burger" type="checkbox" class="checkbox">
                 <label for="burger" class="burgercss">
                     <span></span>
                     <span></span>
@@ -56,7 +57,7 @@
                 </nav>
             </div>
             <div class="blocheader__desc__img">
-                <div itemscope itemtype="http://schema.org/Corporation" class="blocheader__desc">
+                <div itemscope itemtype="http://schema.org/Organization" class="blocheader__desc">
                     <p itemprop="description" class=" blocheader__desc__text">
                         Nous sommes une asbl qui aide les enfants, adolescents et familles en difficultées.
                     </p>
@@ -105,20 +106,27 @@
                 <div class="blocactiv__divimg">
                     &nbsp;
                 </div>
-                <div class="blocactiv__info" itemscope itemtype="http://schema.org/Corporation">
+                <div itemscope itemtype="http://schema.org/Event" class="blocactiv__info" >
                     <h3 class="blocactiv__content__title1">
                         Activitées
                     </h3>
                     <h4 class="blocactiv__info__title2">
-                        Journée famille annuelle
+                        <span itemprop="name">Journée famille annuelle</span>
                     </h4>
-                    <p class="blocactiv__info__text" itemprop="event">
-                        Organisée ce 05 mai 2018 à la salle des coccinelles de Morhet.
-                        Début de la journée vers 14h : Spectacle de magie, karaoké pour enfant, grimage, ateliers cupcakes, repas (sous réservation via                Gwénaëlle Melchior : 0496/40.36.13 ou Yoland Melchior : 0496/40.36.53) et soirée dansante seront au programme.
+                    <p class="blocactiv__info__text" >
+                        Organisée ce <meta itemprop="startDate" content="05/05/2018"> 05 mai 2018 à la salle des coccinelles de Morhet. Début de la journée vers 14h : Spectacle de magie, karaoké pour enfant, grimage, ateliers cupcakes, repas (sous réservation via <span class="hidden" itemprop="organizer">Gwénaëlle Melchior</span>Gwénaëlle Melchior : 0496/40.36.13 ou <span class="hidden" itemprop="organizer">Yoland Melchior</span>Yoland Melchior: 0496/40.36.53) et soirée dansante seront au programme.
+                    <div itemscope itemtype="http://schema.org/place" itemprop="location">
+                    <meta itemprop="name" content="salle des coccinelles de Morhet">
+                    <meta itemprop="address" content="Chaussée de Neufchâteau 25, 6640 Vaux-sur-Sûre, Belgique">
+                    </div>
+                    <meta itemprop="description" content="Début de la journée vers 14h : Spectacle de magie, karaoké pour enfant, grimage, ateliers cupcakes, repas (sous réservation via Gwénaëlle Melchior : 0496/40.36.13 ou Yoland Melchior: 0496/40.36.53) et soirée dansante seront au programme.">
+                    <!--<meta itemprop="organizer" content="Yolan Melchior">-->
+
+
                     </p>
                 </div>
             </section>
-            <section class="blocsponsor" itemscope itemtype="http://schema.org/Corporation">
+            <section class="blocsponsor" itemscope itemtype="http://schema.org/Organization">
                 <h2 class="blocsponsor__title1">
                     Merci à nos sponsors
                 </h2>
@@ -163,12 +171,15 @@
             </section>
         </div>
         <footer class="blocfooter">
-            <div itemscope itemtype="http://schema.org/Corporation" class="blocfooter__content">
+            <div itemscope itemtype="http://schema.org/Organization" class="blocfooter__content">
                 <p class="blocfooter__text" itemprop="legalName">La maison du 1002 pattes</p>
             </div>
-            <img src="./assets/images/logo-2.jpg" alt="logo 1002 pattes" width="105" height="128" class="blocfooter__img">
-            <div class="blocfooter__flex" itemscope itemtype="http://schema.org/Corporation">
-                <p class="blocfooter__flex--adresse fitem" itemprop="adress">Route de Neufchâteau 73 Bastogne</p>
+                <img src="./assets/images/logo-2.jpg" alt="logo 1002 pattes" width="105" height="128" class="blocfooter__img">
+            <div class="blocfooter__flex" itemscope itemtype="http://schema.org/Organization">
+                <div itemprop="address">
+                    <p class="blocfooter__flex--adresse fitem">Route de Neufchâteau 73 Bastogne</p>
+                    <meta itemprop="name" content="La maison du 1002 pattes">
+                </div>
                 <p class="blocfooter__flex--tel fitem" itemprop="telephone">+32 (0)61/46.60.08</p>
                 <p class="blocfooter__flex--compte fitem">N° de compte : BE16 0016 9474 2974</p>
             </div>
