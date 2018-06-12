@@ -1,3 +1,23 @@
+<?php
+if(isset($_POST["submit"])){
+    $error = [];
+    if(isset($_POST["name"]) && strlen($_POST["name"])===0){
+        $error[] = "Vous n'avez pas mis votre nom";
+    }
+    if(isset($_POST["email"]) && strlen($_POST["email"])===0){
+        $error[] = "Vous n'avez pas mis votre email";
+    }
+    if(isset($_POST["message"]) && strlen($_POST["message"])===0){
+        $error[] = "Vous n'avez pas mis de message";
+    }
+
+    if(sizeof($error)===0){
+        header('location:envoye.html');
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html class="no-js" lang="fr">
     <head>
@@ -8,8 +28,7 @@
         <meta name="keywords" content="jeunesse, aide, asbl, bastogne, famille, jeunes, adolescentes, enfants">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
         <link rel="stylesheet" href="../assets/css/bundle.css">
     </head>
@@ -23,13 +42,14 @@
         </h1>
         <div class="blocheader__flex">
             <div class="blocheader__flex__logo logo" itemscope itemtype="http://schema.org/Organization">
-                <a href="#" class="logo__link">
-                    <img itemprop="logo" src="../assets/images/logo-2.jpg" alt="Logo 1002 pattes" width="105" height="128" class="logo__img">
+                <a href="#" class="logo__link" title="Aller sur la page d'accueil de l'asbl 'La maison du 1002 pattes'">
+                    <img itemprop="logo" src="../assets/images/logo-2.jpg" alt="Logo de l'asbl 'La maison du 1002 pattes'" width="105" height="128" class="logo__img">
                     <meta itemprop="url" content="http://lamaisondu1002pattes.be">
                 </a>
             </div>
             <input id="burger" type="checkbox" class="checkbox">
             <label for="burger" class="burgercss">
+                <span class="hidden">Ouvrir/fermer le menu</span>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -38,40 +58,38 @@
                 <h2 class="hidden">Ma navigation principale</h2>
                 <ul class="blocheader__nav__list list">
                     <li class="list__item">
-                        <a href="../index.html" class="list__item__link">Accueil</a>
+                        <a href="../index.html" class="list__item__link" title="Aller vers la page accueil du site 'La maison du 1002 pattes'">Accueil</a>
                     </li>
                     <li class="list__item">
-                        <a href="../pages/aidesansjs.html" class="list__item__link changepages">Vous aider&nbsp;?</a>
+                        <a href="../pages/aide.html" class="list__item__link indexpage" title="Aller vers la page 'Vous aider ?' du site 'La maison du 1002 pattes'">Vous aider&nbsp;?</a>
                     </li>
                     <li class="list__item">
-                        <a href="../pages/apropos.html" class="list__item__link">A propos de nous</a>
+                        <a href="../pages/apropos.html" class="list__item__link" title="Aller vers la page 'À propos de nous' du site 'La maison du 1002 pattes'">À propos de nous</a>
                     </li>
                     <li class="list__item">
-                        <a href="../pages/equipe.html" class="list__item__link">Notre équipe</a>
+                        <a href="../pages/equipe.html" class="list__item__link" title="Aller vers la page 'Notre équipe' du site 'La maison du 1002 pattes'">Notre équipe</a>
                     </li>
                     <li class="list__item">
-                        <a href="#" class="list__item__link active">Nous contacter</a>
+                        <a href="../pages/contact.php" class="list__item__link active" title="Aller vers la page 'Nous contacter' du site 'La maison du 1002 pattes'">Nous contacter</a>
                     </li>
                     <li class="list__item">
-                        <a href="../pages/don.html" class="list__item__link link--noborder">Faire un don</a>
+                        <a href="../pages/don.html" class="list__item__link link--noborder" title="Aller vers la page 'Faire un don' du site 'La maison du 1002 pattes'">Faire un don</a>
                     </li>
                 </ul>
             </nav>
         </div>
         <div class="blocheader__desc__img croop">
             <div itemscope itemtype="http://schema.org/Organization" class="blocheader__desc">
-                <p itemprop="description" class=" blocheader__desc__text up">
+                <p itemprop="description" class=" blocheader__desc__text">
                     Nous sommes une asbl qui aide les enfants, adolescents et familles en difficultées.
                 </p>
             </div>
         </div>
     </header>
-    <div id="main">
-        <section>
-            <h1 class="hidden">
-                Toutes les informations pour nous contacter
-            </h1>
-        </section>
+    <main>
+        <h1 class="hidden">
+            Toutes les informations pour nous contacter
+        </h1>
         <div class="bloccontact__flex">
             <section class="bloccontact">
                 <h2 class="bloccontact__title1">
@@ -99,20 +117,34 @@
                 <h2 class="hidden">
                     Formulaire de contact
                 </h2>
+                <div class="errors">
+                    <?php if(isset($error) && sizeof($error)>0): ?>
+                        <ul>
+                            <?php foreach($error as $e): ?>
+                                <li>
+                                    <p>
+                                        <i class="fas fa-exclamation"></i>
+                                        <?= $e ?>
+                                    </p>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    <?php endif; ?>
+                </div>
                 <form action="#" method="POST" class="bloccontact__form__flex">
                     <div class="bloccontact__flex__column">
-                        <label for="nom" class="bloccontact__form__label">Nom</label>
-                        <input type="text" name="nom" id="nom" class="bloccontact__form__input">
+                        <label for="name" class="bloccontact__form__label">Nom</label>
+                        <input type="text" name="name" id="name" value="<?= @$_POST['name']?>" class="bloccontact__form__input">
                     </div>
                     <div class="bloccontact__flex__column">
                         <label for="email" class="bloccontact__form__label">Email</label>
-                        <input type="text" id="email" name="email" class="bloccontact__form__input">
+                        <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="email" name="email" value="<?= @$_POST['email']?>" class="bloccontact__form__input">
                     </div>
                     <div class="bloccontact__flex__column">
                         <label for="message" class="bloccontact__form__label">Message</label>
-                        <textarea name="message" id="message" cols="30" rows="10" class="bloccontact__form__textarea"></textarea>
+                        <textarea name="message" id="message" cols="30" rows="10" class="bloccontact__form__textarea"><?= @$_POST['message'] ?></textarea>
                     </div>
-                    <input type="submit" value="Envoyer" class="bloccontact__form__input--submit">
+                    <input type="submit" name="submit" value="Envoyer" class="bloccontact__form__input--submit">
                 </form>
             </section>
         </div>
@@ -126,14 +158,14 @@
             <p class="blocactiv-space__text">
                 Nous mettons en place des activitées pour les enfants et leurs familles
             </p>
-            <a href="../index.html" class="blocactiv-space__link">Nos activitées</a>
+            <a href="../index.html" class="blocactiv-space__link" title="Découvrir les activités proposées par l'asbl 'La maison du 1002 pattes'">Nos activitées</a>
         </section>
-    </div>
+    </main>
     <footer class="blocfooter">
         <div itemscope itemtype="http://schema.org/Organization" class="blocfooter__content">
             <p class="blocfooter__text" itemprop="legalName">La maison du 1002 pattes</p>
         </div>
-        <img src="../assets/images/logo-2.jpg" alt="logo 1002 pattes" width="105" height="128" class="blocfooter__img">
+        <img src="../assets/images/logo-2.jpg" alt="Logo de l'asbl 'La maison du 1002 pattes'" width="105" height="128" class="blocfooter__img">
         <div itemscope itemtype="http://schema.org/Organization">
             <meta itemprop="address" content="Route de Neufchâteau 73 Bastogne">
             <meta itemprop="name" content="La maison du 1002 pattes">

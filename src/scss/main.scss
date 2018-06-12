@@ -327,10 +327,6 @@ body{
     background-color: $blue_dark;
 }
 
-.blochelp__ills{
-    //margin-bottom: 10em;
-}
-
 .blochelp__select{
     border:none;
     background: transparent;
@@ -357,7 +353,8 @@ body{
 
 .blochelp__ills{
     text-align: center;
-    margin-bottom: 25em;
+    //margin-bottom: 25em;
+    margin: 0 auto 25em;
 }
 
 .ill:nth-child(odd){
@@ -1015,16 +1012,71 @@ body{
     color: dimgrey;
 }
 
-.burgercss{
+.burgercss, .checkbox{
   display: none;
 }
 .checkbox{
     opacity: 0;
+    border: none;
 }
 
 .checkbox:checked~.blocheader__nav{
     display: flex;
 }
+
+.nojs .content-js{
+    display: none;
+}
+
+.js .content-nojs{
+    display: none;
+}
+
+.return{
+    @include button;
+    background-color: $pink_dark;
+    color: white;
+    margin-top: 8em;
+    display: inline-block;
+}
+
+.envoye__div{
+    margin: 10em $margin;
+    text-align: center;
+}
+.envoye__div p{
+    font-size: 4em;
+    color: black;
+    font-family: $font;
+    margin: 4em 0;
+}
+
+.errors{
+    position: relative;
+}
+
+.errors ul li p{
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: red;
+    margin-bottom: .5em;
+}
+
+.fa-exclamation{
+    color: red;
+    margin-right: .3em;
+}
+
+.checkbox:focus ~ .burgercss>span{
+    background-color: red;
+}
+
+
+.ill__name{
+    text-decoration: none;
+    color: initial;
+}
+
 
 @import "responsive";
 
